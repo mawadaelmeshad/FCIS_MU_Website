@@ -1,0 +1,290 @@
+
+:root{
+    --primary-color:rgb(183, 0, 255,0.9);
+    --secondary-color:#601cfc;
+    --overlay-color:rgba(22,33,62,0.9);
+    --menu-speed:0.75s;
+    
+}
+
+/*baaaaar*/
+#navbar .menue-wrap {
+    position:fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    
+}
+
+#navbar .menue-wrap .toggle{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+#navbar .menue-wrap .hamburger{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+    transition: all 0.4s ease;
+}
+
+#navbar .menue-wrap .hamburger div{
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    transition: all 0.4s ease;
+}
+
+#navbar .menue-wrap .hamburger div:before,
+#navbar .menue-wrap .hamburger div:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    top: -10px;
+}
+
+#navbar .menue-wrap .hamburger div:after{
+top: 10px;
+
+}
+
+#navbar .menue-wrap .toggle:checked + .hamburger{
+background: var(--secondary-color);
+width: 100px;
+height: 100px;
+padding: 0 1rem 1rem 2.5rem;
+border-bottom-left-radius: 100%;
+box-shadow: 1px 5px var(--primary-color);
+z-index: 1;
+}
+
+#navbar .menue-wrap .toggle:checked + .hamburger div{
+    transform: rotate(135deg);
+
+}
+
+#navbar .menue-wrap .toggle:checked + .hamburger div:before,
+#navbar .menue-wrap .toggle:checked + .hamburger div:after{
+    top: 0;
+    transform: rotate(90deg);
+
+}
+
+#navbar .menue-wrap .toggle:checked:hover + .hamburger div{
+    transform: rotate(225deg);
+}
+
+
+/*menu itself*/
+
+#navbar .menue-wrap .menu {
+position: fixed;
+top: 0;
+right: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+
+display: flex;
+align-items: center;
+justify-content: center;
+visibility:hidden
+}
+
+#navbar .menue-wrap .menu div{
+    background: var(--overlay-color);
+    opacity: 0.9;
+    width: 200vw;
+    height: 200vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+#navbar .menue-wrap .menu div div{
+text-align: center;
+opacity: 0;
+transition: all 0.4s ease;
+
+}
+
+#navbar .menue-wrap .menu div  div  ul{
+display: block;
+}
+
+#navbar .menue-wrap .menu  div  div  ul  li {
+    padding: 1rem;
+}
+
+#navbar .menue-wrap .menu  div  div  ul  li a{
+    font-size: 1.5rem;
+    transition: all 0.4s ease-in-out;
+}
+
+#navbar .menue-wrap .menu  div  div  ul  li  a:hover{
+    background: none;
+    color: var(--secondary-color);
+}
+
+#navbar .menue-wrap .menu  div  div  ul  li :first-child a{
+    background: none;
+ 
+}
+
+/*show menu*/
+
+#navbar .menue-wrap .toggle:checked ~ .menu{
+visibility: visible;
+}
+
+#navbar .menue-wrap .toggle:checked ~ .menu div{
+transform: scale(1);
+transition: all var(--menu-speed) ease;
+}
+
+#navbar .menue-wrap .toggle:checked ~ .menu div div {
+    opacity: 1;
+    transition: all 0.4s 0.2s e;
+}
+
+/*section 1*/
+#showcase{
+    position:relative;
+    height:100%;
+    width: 100%;
+    
+}
+
+.btn{/*button*/
+    background-color:var(--secondary-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 25px;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    border-radius: 10px;
+    width: 25%;
+    height: 10%;
+    align-items: center;
+    transition: background 0.4s ease-in-out;
+    
+    
+}
+a{
+text-decoration: none;
+ color: #fff;
+}
+a:hover{
+    background: var(--primary-color);
+}
+
+/*uses classes*/
+.container{
+    max-width: 100%;
+    margin-top:  20px;
+    margin-left: 2px;
+    margin-bottom: -10px;
+
+}
+
+
+/*section 2*/
+
+.overview .title{
+   
+    font-size: 2rem;
+    font-weight: 300;
+    
+    
+
+    
+ }
+.overview-content{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.slider{
+    align-items: center;
+   
+    
+    
+}
+.li2{
+    width: 700px;
+    height: 500px;
+} 
+.li1{
+    width: 700px;
+    height: 500px;
+  } 
+ .li3{
+    width: 700px;
+    height: 500px;
+  } 
+  .slider{
+    width: 400px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.slider ul {
+    padding: 0;
+    width: 2100px;
+    list-style: none;
+    position: relative;
+    animation:sliding 10s ease-in-out infinite;
+}
+@keyframes sliding{
+    0%,30%{left: 0;}
+    35%,65%{left: -700px;}
+    70%,100%{left: -1400px;}
+}
+.wards ul li{
+    font-size: .5rem;
+}
+
+.locate{
+    display: flex;
+    flex-direction: column;
+    
+}
+.loc{
+    width: 400px;
+    height: 300px;
+   align-self:baseline;
+   margin-left: 2.5%;
+   margin-top: 10px;
+
+    
+}
+
+
+
+
+
+
+
