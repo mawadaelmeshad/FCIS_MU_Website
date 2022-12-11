@@ -1,4 +1,5 @@
 
+
 :root{
     --primary-color:rgb(183, 0, 255,0.9);
     --secondary-color:#601cfc;
@@ -173,7 +174,20 @@ transition: all var(--menu-speed) ease;
     position:relative;
     height:100%;
     width: 100%;
+
     
+}
+#showcase .showcase-content:before{/*background*/
+    content: "";
+    background: url(faculty.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: 80%;
+    opacity: 20%;
 }
 
 .btn{/*button*/
@@ -185,7 +199,7 @@ transition: all var(--menu-speed) ease;
     margin-top: 2rem;
     margin-left: 3rem;
     border-radius: 10px;
-    width: 25%;
+    width: 33%;
     height: 10%;
     align-items: center;
     transition: background 0.4s ease-in-out;
@@ -234,34 +248,34 @@ a:hover{
     
 }
 .li2{
-    width: 700px;
+    width: 500px;
     height: 500px;
 } 
 .li1{
-    width: 700px;
+    width: 500px;
     height: 500px;
   } 
  .li3{
-    width: 700px;
-    height: 500px;
+    width: 500px;
+    height: 200px;
   } 
   .slider{
-    width: 400px;
+    width: 300px;
     margin: auto;
     overflow: hidden;
     position: relative;
 }
 .slider ul {
     padding: 0;
-    width: 2100px;
+    width: 1500px;
     list-style: none;
     position: relative;
     animation:sliding 10s ease-in-out infinite;
 }
 @keyframes sliding{
     0%,30%{left: 0;}
-    35%,65%{left: -700px;}
-    70%,100%{left: -1400px;}
+    35%,65%{left: -500px;}
+    70%,100%{left: -1000px;}
 }
 .wards ul li{
     font-size: .5rem;
@@ -273,17 +287,42 @@ a:hover{
     
 }
 .loc{
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
    align-self:baseline;
-   margin-left: 2.5%;
+   margin-left: 1%;
    margin-top: 10px;
 
     
 }
+.vid{
+    width: 265px;
+}
+.overview-card{
+    background-color: white;
+    border: 2px solid  rgb(183, 0, 255);
+    min-height: 14em;
+    width: 28em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+    margin-right: 2em;
+    margin-left: 2em;
+   
+   }
 
 
 
+   .info h3{
+    color: #601cfc;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin:10px;
+    }
+    .info p{
+        font-size: .8em;
+    }
 
 
 
